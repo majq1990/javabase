@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk8-openj9:x86_64-debian-jdk8u242-b08_openj9-0.18.1-slim
+FROM adoptopenjdk/openjdk8-openj9:aarch64-debianslim-jre8u-nightly
 
 ENV LANG=C.UTF-8 \
     TZ="Asia/Shanghai" \
@@ -6,7 +6,7 @@ ENV LANG=C.UTF-8 \
 
 # Add mirror source
 RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak && \
-    sed -i 's http://.*.debian.org http://mirrors.aliyun.com g' /etc/apt/sources.list
+    sed -i 's http://.*.debian.org http://mirrors.163.com g' /etc/apt/sources.list
 
 # Fix base image
 RUN apt-get update && apt-get install -y \
