@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y \
          zip \
          curl \
          wget \
+         free \
          gzip \
          unzip \
          bzip2 \
