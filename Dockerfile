@@ -1,4 +1,6 @@
-FROM adoptopenjdk/openjdk8-openj9:x86_64-debian-jdk8u242-b08_openj9-0.18.1-slim
+#FROM adoptopenjdk/openjdk8-openj9:x86_64-debian-jdk8u242-b08_openj9-0.18.1-slim
+FROM adoptopenjdk/openjdk8-openj9:aarch64-debianslim-jre8u-nightly
+
 
 ENV LANG=C.UTF-8 \
     TZ="Asia/Shanghai" \
@@ -20,7 +22,9 @@ RUN apt-get update && apt-get install -y \
          zip \
          curl \
          wget \
-         free \
+         procps \
+         telnet \
+         iputils-ping \
          gzip \
          unzip \
          bzip2 \
